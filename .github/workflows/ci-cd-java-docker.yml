@@ -46,6 +46,9 @@ jobs:
       - name: Code coverage report
         run: mvn jacoco:report
 
+        run: mvn jacoco:report || true
+
+
       - name: Build Docker image
         run: |
           docker build -t devops-java-app .
@@ -61,7 +64,3 @@ jobs:
       - name: Push Docker image
         if: github.repository_owner == 'TU_USUARIO'
         run: docker tag devops-java-app yourdockerhubuser/devops-java-app:latest
-
-
-        run: mvn jacoco:report || true
-

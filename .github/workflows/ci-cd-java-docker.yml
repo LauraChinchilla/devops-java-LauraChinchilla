@@ -44,8 +44,6 @@ jobs:
 
 
       - name: Code coverage report
-        run: mvn jacoco:report
-
         run: mvn jacoco:report || true
 
 

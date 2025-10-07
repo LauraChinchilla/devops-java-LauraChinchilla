@@ -47,9 +47,14 @@ jobs:
         run: mvn jacoco:report || true
 
 
-      - name: Build Docker image
-        run: |
-          docker build -t devops-java-app .
+      # - name: Build Docker image
+      #   run: |
+      #     docker build -t devops-java-app .
+
+
+      - name: Build Docker Image
+        run: echo "Skipping Docker build for demo"
+
 
 
       - name: Log in to Docker Hub

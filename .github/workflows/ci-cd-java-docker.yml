@@ -40,9 +40,6 @@ jobs:
         run: mvn test
 
       - name: Checkstyle analysis
-        run: mvn checkstyle:check
-
-        
         run: mvn checkstyle:check || true
 
 
